@@ -47,4 +47,3 @@ def test_create_company_with_only_name(client):
     assert response_content.get('notes') == ''
 
 
-
