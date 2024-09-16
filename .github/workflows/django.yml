@@ -27,4 +27,4 @@ jobs:
         pip install -r requirements.txt
     - name: Run Tests
       run: |
-        pytest -v -s --durations=0 --cov=.
+        pytest -vv -s --durations=0 --cov=.
