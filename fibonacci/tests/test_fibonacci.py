@@ -4,7 +4,6 @@ from fibonacci.fib_cached import fibonacci_cached
 from fibonacci.fib_cached import fibonacci_lru_cached
 from fibonacci.naive import fibonacci_naive
 from typing import Callable
-from fixtures import time_tracker
 from fibonacci.dynamic import dynamic_fibo
 
 
