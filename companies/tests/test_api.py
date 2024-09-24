@@ -49,22 +49,14 @@ def test_create_company_with_only_name(client):
     assert response_content.get("notes") == ""
 
 
-def test_multiple_companies_exists_should_succeed(client, company):
-    google = company(name='Google')
-    amazon = company(name='Amazon')
-    test_company = company()
-    company_names = {google.name, amazon.name, test_company.name}
+@pytest.mark.parametrize('companies', [['TikTok', 'Twitch', 'Test Inc.'], ['Facebook', 'Instagram']], ids=['3 T Companies', 'Meta Companies'], indirect=True)
+def test_multiple_companies_exists_should_succeed(client, companies):
 
+    company_names = set([company.name for company in companies])
     response_companies = client.get(companies_url).json()
     assert len(company_names) == len(response_companies)
     response_company_names = set(map(lambda company: company.get('name'), response_companies))
     assert company_names == response_company_names
 
 
-@pytest.fixture
-def company(**kwargs):
-    def _company_factory(**kwargs) -> Company:
-        company_name = kwargs.pop("name", "Test Company Inc.")
-        return Company.objects.create(name=company_name, **kwargs)
 
-    return _company_factory
