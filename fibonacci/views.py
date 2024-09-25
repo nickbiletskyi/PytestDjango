@@ -1,11 +1,11 @@
 from django.http import JsonResponse, HttpResponseBadRequest
-from fibonacci.dynamic import dynamic_fibo_v2 # Import the Fibonacci function
+from fibonacci.dynamic import dynamic_fibo_v2  # Import the Fibonacci function
 
 
 def fibonacci_view(request):
     try:
         # Extract the 'n' parameter from the GET request
-        n = int(request.GET.get('n'))
+        n = int(request.GET.get("n"))
         if n < 0:
             return HttpResponseBadRequest("n must be a non-negative integer.")
 

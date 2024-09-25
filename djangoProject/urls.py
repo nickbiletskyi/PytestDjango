@@ -23,5 +23,5 @@ from companies.urls import companies_router
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include(companies_router.urls)),
-    path('', include('fibonacci.urls')),
+    path("", include("fibonacci.urls")),
 ]

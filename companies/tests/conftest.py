@@ -13,6 +13,7 @@ def company(**kwargs):
 
     return _company_factory
 
+
 @pytest.fixture
 def companies(request, company) -> List[Company]:
     companies = []
