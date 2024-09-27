@@ -60,12 +60,11 @@ def test_mocked_reqres():
                 "text": "To keep ReqRes free, contributions towards server costs are appreciated!",
             },
         },
-        status=200
+        status=200,
     )
     response = requests.get("https://reqres.in/api/users?page=2")
     response_content = json.loads(response.content)
     assert response.status_code == 200
-    assert response_content['page'] == 2
-    assert response_content['data'][0]['email'] == "michael.lawson@reqres.in"
-    assert response_content['data'][0]['id'] == 2
-
+    assert response_content["page"] == 2
+    assert response_content["data"][0]["email"] == "michael.lawson@reqres.in"
+    assert response_content["data"][0]["id"] == 2
