@@ -49,6 +49,7 @@ werkzeug = "==3.0.4"
 "zope.interface" = "==7.0.3"
 responses = "*"
 allure-pytest = "*"
+pytest-sugar = "*"
 
 [dev-packages]
 
