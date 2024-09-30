@@ -51,6 +51,7 @@ responses = "*"
 allure-pytest = "*"
 pytest-sugar = "*"
 python-dotenv = "*"
+whitenoise = "*"
 
 [dev-packages]
 
