@@ -22,11 +22,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET')
-print(SECRET_KEY)
+# SECRET_KEY = os.getenv('SECRET')
+SECRET_KEY = "django-insecure-khip15l0)o%npd6sw+*jja71xxd1d&yv^pzdo-&$0(1!4nikn$"
+
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG')
-print(DEBUG)
+# DEBUG = os.getenv('DEBUG')
+DEBUG = False
+
 
 ALLOWED_HOSTS = ["pytest-django-bpdde2g9dpesehg9.polandcentral-01.azurewebsites.net", "127.0.0.1", "localhost"]
 
