@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-khip15l0)o%npd6sw+*jja71xxd1d&yv^pzdo-&$0(1!4nikn$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["pytest-django-bpdde2g9dpesehg9.polandcentral-01.azurewebsites.net"]
 
 
 # Application definition
