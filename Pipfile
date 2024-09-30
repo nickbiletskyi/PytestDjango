@@ -50,6 +50,7 @@ werkzeug = "==3.0.4"
 responses = "*"
 allure-pytest = "*"
 pytest-sugar = "*"
+python-dotenv = "*"
 
 [dev-packages]
 
